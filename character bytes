@@ -1,0 +1,5 @@
+# Note that the final character takes up 4 bytes in UTF8.   expaining bytes of the sentence
+thanks = u'هوء تمام ذهين آهي'.encode('UTF-8')
+num_bytes = tf.strings.length(thanks).numpy()
+num_chars = tf.strings.length(thanks, unit='UTF8_CHAR').numpy()
+print('{} bytes; {} UTF-8 characters'.format(num_bytes, num_chars))
