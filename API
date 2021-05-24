@@ -1,0 +1,4 @@
+import googletrans       #number of supported language  fyp
+
+print("Number of Supported Languages:", len(googletrans.LANGUAGES))
+print(googletrans.LANGUAGES)
