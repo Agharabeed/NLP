@@ -1,0 +1,6 @@
+import nltk   #POS fyp
+
+word_data = "هي منهنجي ڳوٺ سان تعلق رکي ٿو"
+tokens = nltk.word_tokenize(word_data)
+
+print ("Parts of speech: ", nltk.pos_tag(tokens))
