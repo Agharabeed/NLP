@@ -1,0 +1,10 @@
+
+# importing modules  fyp
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+
+ps = PorterStemmer()
+
+sentence = "مان پاڪستان سان تعلق رکان ٿو"
+words = word_tokenize(sentence)
+print (words)
