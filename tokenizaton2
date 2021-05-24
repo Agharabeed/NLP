@@ -1,0 +1,22 @@
+from tensorflow.keras.preprocessing.sequence import pad_sequences  #tokenize    fyp
+from tensorflow.keras.preprocessing.text import Tokenizer
+
+sentences = [
+    'مون کي ڪجهه به نظر نٿو اچي',
+    'I love my dog',
+    'I love my cat',
+    'You love my dog!',
+    'Do you think my dog is amazing?'
+]
+
+tokenizer = Tokenizer(num_words = 100, oov_token="<OOV>")
+tokenizer.fit_on_texts(sentences)
+word_index = tokenizer.word_index
+
+sequences = tokenizer.texts_to_sequences(sentences)
+
+padded = pad_sequences(sequences, maxlen=5)
+print("Word Index = " , word_index)
+print("Sequences = " , sequences)
+print("Padded Sequences:")
+print(padded)
