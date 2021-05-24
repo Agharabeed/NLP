@@ -1,0 +1,5 @@
+import nltk  #POS
+word_data = "Can you please buy me an Arizona Ice Tea? It's $0.99."
+tokens = nltk.word_tokenize(word_data)
+
+print ("Parts of speech: ", nltk.pos_tag(tokens))
