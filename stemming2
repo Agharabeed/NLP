@@ -1,0 +1,9 @@
+# importing modules   fyp
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+
+ps = PorterStemmer()
+
+sentence = "Programers program with programing languages"
+words = word_tokenize(sentence)
+print (words)
