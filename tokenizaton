@@ -1,0 +1,17 @@
+from googletrans import Translator
+from pprint import pprint
+
+#initialize the Translator
+translator = Translator()
+
+text = input("Enter your Text: ")
+
+source_lan = "en" #English Language
+translated_to= "sd" #Sindhi Language
+
+#translate text
+translated_text = translator.translate(text, src=source_lan, dest = translated_to)
+
+print(f"The Actual Text was {text}")
+print(f"The Translated Text is: {translated_text.text}")
+print(f"The Translated Text pronunciation is {translated_text.pronunciation}")
